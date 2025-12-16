@@ -1,0 +1,283 @@
+Question 1:
+What is Agile development?
+
+a) A rigid and detailed project plan
+b) An iterative and incremental approach to software development
+c) A fixed set of tasks to be completed in a linear fashion
+d) A methodology that discourages customer involvement
+
+Question 2:
+Which of the following statements best describes the Agile Manifesto?
+
+a) A comprehensive set of rules and regulations for project management
+b) A set of guiding values and principles for Agile development
+c) A document outlining strict development timelines
+d) A tool for code version control
+
+Question 3:
+What is an example of a real-life application of Agile principles?
+
+a) Building a bridge according to a predefined plan
+b) Developing a mobile app in incremental stages with continuous feedback
+c) Constructing a skyscraper with fixed, non-negotiable requirements
+d) Implementing a strict waterfall model for a software project
+
+Question 4:
+Which of the following is one of the four core values of the Agile Manifesto?
+
+a) Comprehensive documentation over working software
+b) Following a plan over responding to change
+c) Individuals and interactions over processes and tools
+d) Strict adherence to contracts over customer collaboration
+
+Question 5:
+What is the primary focus of Agile development?
+
+a) Following a predefined plan
+b) Delivering working software frequently
+c) Strictly adhering to documentation requirements
+d) Minimizing customer feedback
+
+Question 6:
+Can you provide a real-life example of an iterative process in Agile development?
+
+a) Building an entire system in one go
+b) Repeatedly testing the final product
+c) Developing and releasing new features in short cycles with regular feedback
+d) Completing all project requirements before starting development
+
+Question 7:
+What is a real-life application of Scrum in Agile?
+
+a) A quick sprint to finish the project
+b) A framework for Agile project management
+c) A type of bug in the code
+d) A comprehensive project documentation
+
+Question 8:
+In the context of Agile, what might be a real-life scenario for a "sprint"?
+
+a) A long planning session at the beginning of a project
+b) A short period during which a team works to complete a set amount of work
+c) A break period during development
+d) A review session at the end of the project
+
+Question 9:
+What role does the Product Owner play in a real-life Agile project?
+
+a) Managing the day-to-day tasks of the team
+b) Writing code and developing the product
+c) Representing stakeholders and prioritizing the product backlog
+d) Conducting quality assurance testing
+
+Question 10:
+Can you provide a real-life example that aligns with the Agile principle of welcoming changing requirements?
+
+a) Sticking to the initial project plan without any modifications
+b) Embracing new feature requests from users even late in the development
+c) Ignoring feedback from stakeholders once the development has started
+d) Following a rigid timeline with no room for adjustments
+
+Answers:
+
+b) An iterative and incremental approach to software development
+b) A set of guiding values and principles for Agile development
+b) Developing a mobile app in incremental stages with continuous feedback
+c) Individuals and interactions over processes and tools
+b) Delivering working software frequently
+c) Developing and releasing new features in short cycles with regular feedback
+b) A framework for Agile project management
+b) A short period during which a team works to complete a set amount of work
+c) Representing stakeholders and prioritizing the product backlog
+b) Embracing new feature requests from users even late in the development
+================================================================================
+A hypothetical Agile project scenario:
+
+This exercise not only assesses your understanding of Agile principles but also provides a hands-on experience in applying those principles in a simulated project environment.
+
+Agile Principles Exercise: Building a Task Management App
+Scenario:
+Imagine you are part of a software development team tasked with building a Task Management App. The client wants a simple, user-friendly app that allows users to create, assign, and track tasks collaboratively. The project is set to be developed using Agile principles. Your team has just started the first sprint.
+
+Exercise:
+
+Task 1: User Stories (15 minutes)
+Individual Activity:
+
+Each student, as a member of the development team, is tasked with creating two user stories for the Task Management App. These user stories should capture essential functionalities or features that the app needs to have.
+Encourage students to think from the user's perspective and express the user story in the "As a [user], I want [feature] so that [benefit]" format.
+Group Activity:
+
+Form small groups and have students share their user stories within their groups.
+Each group should collaboratively choose the most valuable user stories and be prepared to explain their choices.
+Task 2: Sprint Planning (20 minutes)
+Individual Activity:
+
+Each student, as a Scrum Master, is tasked with planning the first sprint. They need to identify the user stories chosen for the sprint, estimate the effort required for each story, and decide on the sprint duration.
+Group Activity:
+
+Students should come together in their groups to discuss and align their individual sprint plans. Emphasize the importance of collaboration and reaching a consensus on the sprint goal.
+
+Task 3: Daily Stand-up (15 minutes)
+Group Activity:
+Each group conducts a simulated daily stand-up meeting. Students take turns playing the roles of team members and provide updates on their progress, mention any impediments, and discuss how they plan to move forward.
+
+Task 4: Sprint Review and Retrospective (20 minutes)
+Group Activity:
+Each group conducts a simulated sprint review, presenting the completed user stories and demonstrating any working features to the "client" (instructor or another group).
+Following the review, the group conducts a retrospective, discussing what went well, what could be improved, and any adjustments they would make for the next sprint.
+Debrief (10 minutes)
+
+Class Discussion:
+Let's have a discussion about your experience with the exercise and how it relates to Agile principles.
+Remember the key Agile concepts such as collaboration, adaptability, and continuous feedback.
+
+========================================================================================
+https://1drv.ms/f/s!AtB-qUlPfIiCiMtVUnFaqTpKacquYw?e=0HqPLQ
+
+Make sure "Docker Desktop Service" is running
+net stop com.docker.service
+net start com.docker.service
+
+docker images
+docker ps
+docker ps -a
+docker rm containerID
+docker rmi imageid
+----------------------------
+
+docker run --rm hello-world
+
+--rm 
+Removes the anonymous volumes (file system) associated with the container when the container is removed. 
+docker run hello-world
+docker images
+docker ps -a
+
+========================================================================
+docker login
+
+Search for possible images
+docker search nginx
+
+Pull an image down with the command 
+docker pull nginx
+
+tag lets us edit an image and save it to our own personal registry
+docker tag nginx mikebaradaran/my-nginx`
+
+view the images saved locally 
+docker images
+
+docker push mikebaradaran/my-nginx
+
+We can delete our local image(s)
+docker rmi nginx
+docker rmi mikebaradaran/my-nginx
+
+TIP - You can type any number of chars in the image docker rmi 4
+=========================================================================
+docker run -d -p 80:80 --name nginxDemo nginx
+
+-d : detached, logs aren't outputed to the terminal
+-p : port publishing, <host port>:<container port>
+--name : what you want to name the container, if no name is given a random name is given
+<image name> : what image to build the container from
+
+docker ps
+http://localhost
+
+-------------------------------------------
+
+Exec into this container 
+(docker exec -it (interactive) <container name> <shell to interact with>)
+docker exec -it nginxDemo bash
+
+Update package manager and install editor
+apt update
+apt install nano -y
+
+apt update: update the package index files on the system, which contain information about available packages and their versions. It downloads the most recent package information from the sources listed in the "/etc/apt/sources.list" file that contains your sources 
+
+cd /usr/share/nginx/html and modify it
+nano index.html
+
+Escape exec by typing 
+    exit 
+
+http://localhost/
+============================
+
+## Complex Dockerfile Instructions
+Demo to show commands by running a basic Python App
+
+mkdir python-docker` cd to it and create a python file `touch coolApp.py`
+
+Enter the following in `coolApp.py`  (nano coolApp.py)
+
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/home')
+@app.route('/')
+def home():
+    return "Hello world!"
+
+if __name__ == '__main__':
+    app.run(port=5000, host='0.0.0.0', debug=True)
+
+npm install flask  <--
+
+Create a Dockerfile and add the following:
+
+# Python as a base image
+FROM python:3.7
+# Create and set work directory as coolApp
+WORKDIR /coolApp
+# Execute a pip install command to install flask
+RUN pip install flask
+# Copies the python file into /coolApp
+COPY coolApp.py .
+# Documents the por#t to use
+EXPOSE 5000
+# What do you want the container to do when it starts? Main process
+ENTRYPOINT ["python", "coolApp.py"]
+
+
+Build the image with `docker build -t coolapp .`
+
+Tag the image with your username `docker tag coolapp <username>/coolapp
+
+Push the image up to DockerHub with `docker push <username>/coolapp`
+
+Run a container with `docker run -d -p 5000:5000 --name coolAppContainer coolapp`
+http://localhost:5000
+
+============================================================================
+
+https://stackblitz.com/
+https://training.play-with-docker.com/
+
+ Mustapha
+ Zack
+ Filip
+ Ashley
+ Daniel
+ Caleb
+ Joshua
+ Junpeng
+ Johannes
+ Shaquille
+ Benjamin
+ Samuel
+ Alexander
+ Rabea
+
+https://app.qa.com/lab/creating-knowledge-base-using-azure-devops-wiki/
+https://app.qa.com/lab/deploying-infrastructure-terraform/
+
+
+
+
+
